@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        @font-face{
+   font-family: bungee;
+   src: url(./Bungee-Regular.ttf);
+}
+@font-face{
+   font-family: lato;
+   src: url(./Lato-Black.ttf);
+}
+@font-face{
+   font-family: poppins;
+   src: url(./Poppins-Black.ttf);
+}
+body{
+   background-color: #ffffff;
+   font-family: lato,Arial, Helvetica, sans-serif;   
+   margin: 0;
+   padding: 0;
+   color: rgb(0, 0, 0);
+}
+       
+       
+       .container {
+         padding: 16px;
+         background-color: transparent;
+         width: 700px;
+         margin: 50px 23% 50px 23%;
+         box-shadow: 0px 0px  8px #000000;
+         border-radius: 10px;
+       }
+       h1{
+           text-align: center;
+           color: #000000;
+       }
+       
+       /* Full-width input fields */
+       input[type=text],  input[type=password]{
+         width: 95%;
+         padding: 15px;
+         margin: 5px 0px 22px 0;
+         color: rgb(1, 1, 1);
+         display: inline-block;
+         border: 2px solid #0000ff;
+         border-radius: 5px;
+         background-color: transparent;
+       }
+       
+       /* Overwrite default styles of hr */
+       hr {
+         border: 1px solid grey;
+         margin-bottom: 25px;
+       }
+       
+       /* Set a style for the submit button */
+       .registerbtn {
+         background-color: #000000;
+         color: rgb(255, 255, 255);
+         font-family: poppins;
+         font-size: 17px;
+         padding: 12px 20px;
+         margin: 8px 0;
+         border: none;
+         cursor: pointer;
+         width: 100%;
+         transition: 0.4s;
+       }
+       
+       .registerbtn:hover {
+         background-color: rgb(229, 225, 0);
+         color: white;
+       }
+    </style>
+</head>
+
+    <body>
+        <div class="container">
+        <h1>Login</h1>
+        
+    
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" id="name">
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="pass">
+            
+        <input type="button" class="registerbtn" value="Login" onclick="log()">
+    
+      </div>
+    
+    
+    <script>
+         var name= localStorage.getItem("myValue20");
+         document.getElementById('name').value=name;
+         var pass= localStorage.getItem("myValue21");
+         document.getElementById('pass').value=pass;
+         function log(){
+          var name=document.getElementById('name').value;
+          localStorage.setItem("myValue23", name);
+          alert("Hi Dear! " + name + " welcome to Star Organic Farm")
+          window.location.href='index.html'
+    }
+    </script>
+    </body>
+    
+
+</html>
